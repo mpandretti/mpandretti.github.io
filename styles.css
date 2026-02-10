@@ -1,6 +1,8 @@
 body {
     font-family: Garamond, serif;
-    font-size: 26px;
+    font-size: 20px;
+    /*intentional conflict with below .leftside selector. .leftside overrides this because 
+    it is a class and body is an element and the class has higher specificity */
 
 }
 
@@ -26,6 +28,7 @@ body {
     padding-right: 10rem;
     padding-top: 50px;
     justify-content: center;
+    font-size: 26px;
 }
 
 
@@ -44,7 +47,8 @@ body {
 }
 
 td,
-th {
+th,
+tr {
     text-align: center;
     vertical-align: middle;
 }
@@ -81,8 +85,8 @@ footer p {
 
 footer a {
     font-size: 18px;
-    font-weight: bold;  
-    padding-bottom: 7px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .navbar {
@@ -103,4 +107,14 @@ header h2 {
     font-weight: normal;
     margin-bottom: 16px;
     text-align: left;
+}
+
+#about,
+#credentials, #work-experience {
+    padding-bottom: 150px;
+}
+
+#work-experience td {
+    padding-bottom: 30px;
+
 }
