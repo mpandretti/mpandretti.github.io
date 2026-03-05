@@ -133,6 +133,15 @@ header {
 
 @media (max-width: 768px) {
 
+      html, body {
+        overflow: visible !important;
+    }
+    
+    .page {
+        flex-direction: column;
+        height: auto;
+    }
+
     html,
     body {
         overflow: auto;
