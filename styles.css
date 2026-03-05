@@ -24,11 +24,11 @@ body {
     background: #fffefe;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     padding-top: 50px;
     justify-content: center;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 
@@ -72,49 +72,116 @@ a:active {
     cursor: default;
 }
 
-footer h3 {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+header {
+    padding-top: 15vh;
+    padding-bottom: 30vh;
 }
 
-footer p {
-    padding-top: 0px;
-    font-size: 18px;
-    text-align: left;
-}
 
-footer a {
-    font-size: 18px;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
 
 .navbar {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
-.navbar a {
-    font-size: 18px;
-    margin-right: 20px;
+.nav-links {
+    display: flex;
+    gap: 20px;
 }
 
-header h1 {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+.nav-links a {
+    font-size: 22px;
 }
 
-header h2 {
-    font-weight: normal;
-    margin-bottom: 16px;
-    text-align: left;
+.nav-links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
+
+.nav-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
 
 #about,
-#credentials, #work-experience {
+#credentials,
+#work-experience {
     padding-bottom: 150px;
 }
 
 #work-experience td {
     padding-bottom: 30px;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 20px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 8vw;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow: auto;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    .leftside {
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 18px;
+    }
+
+    .rightside {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    .project-card img {
+        height: 40vw;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+
+
 
 }
